@@ -1,3 +1,4 @@
+let num = prompt("Type weapon number choice: 1=Rock, 2=Paper, 3=Scissors")
 const choice = ['Rock', 'Paper', 'Scissors'];
 const random = Math.floor(Math.random() *choice.length);
 const randomChoice = choice[random];
@@ -16,28 +17,23 @@ function player(num) {
         return choice[2]
     }
 
-
+const playerSelection = player()
+const computerSelection = getComputerChoice
     function playRound(playerSelection, computerSelection) {
-        if (playerSelection === "Rock" && computerSelection === "Paper"){
+        if (playerSelection == "Rock" && computerSelection == "Paper"){
             return ("You lose! Rock beats paper");
-        } else if (playerSelection === "Paper" && computerSelection === "Scissors"){
+        } else if (playerSelection == "Paper" && computerSelection == "Scissors"){
             return ("You lose! Scissors beats paper");
-        } else if (playerSelection === "Scissors" && computerSelection === "Rock"){
+        } else if (playerSelection == "Scissors" && computerSelection == "Rock"){
             return ("You lose! Rock beats paper");
-        } else if (playerSelection === "Rock" && computerSelection === "Scissors"){
+        } else if (playerSelection == "Rock" && computerSelection == "Scissors"){
             return ("You Win! Scissors beats paper");
-        } else if (playerSelection === "Paper" && computerSelection === "Rock"){
+        } else if (playerSelection == "Paper" && computerSelection == "Rock"){
             return ("You win! Paper beats rock");
-        } else if (playerSelection === "Scissors" && computerSelection === "Paper"){
+        } else if (playerSelection == "Scissors" && computerSelection == "Paper"){
             return ("You win! Scissors beats paper");
-        } else if (playerSelection === "Rock" && computerSelection === "Rock"){
-            return ("Tie")
-        } else if (playerSelection === "Paper" && computerSelection === "Paper"){
-            return ("Tie")
-        } else (playerSelection === "Scissors" && computerSelection === "Scissors")
+        } else (playerSelection === computerSelection)
             return ("Tie")
         }
-    
-    const computerSelection = getComputerChoice();
-    const playerSelection = player(num)
-    console.log(playRound(playerSelection, computerSelection));
+
+console.log(playRound(player(num), computerSelection))
