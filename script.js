@@ -13,7 +13,7 @@ const random = Math.floor(Math.random() * choice.length);
 const computerSelection = choice[random];
 console.log('Opponent chose: ' + computerSelection);
 
-console.log(playRound(num - 1, random));
+alert(playRound(num - 1, random));
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
